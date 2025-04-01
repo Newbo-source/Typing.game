@@ -5,10 +5,10 @@ const timerElement = document.getElementById("time");
 const scoreElement = document.getElementById("score");
 const highestScoreElement = document.getElementById("highestScore");
 
-const words = ["사랑", "행복", "기쁨", "웃음", "미소"];
+const words = ["에드거의 목도리", "타라의 붕대","진의 그랩","모티스의 삽","맨디의 캔디", "팽의 신발","엠즈의 스프레이","키트의 종이상자","더그의 핫도그","행크의 세우껍질","쉘리의 더블배럴","콜트의 리볼버","스파이크의 선인장","레온의 사탕","크로우의 단검","거스의 풍선","로사의 글로브","루미의 철퇴","핑크스의 시간은 느리게간다","뉴보잘생김","비의 독침","루의 아이스크림","게일의 게이","스퀴크의 침","러프스의 털뭉치","대릴의 대굴대굴","제시의 터렛","페니의 포탑","니타의 곰","메이지의 지진","찰리의 고치","코델리우스의 버섯","펄의 쿠키","보의 활","버즈의 호루라기","리코의 통통탄"];
 let currentWord = "";
 let score = 0;
-let timeLeft = 60;
+let timeLeft = 30;
 let timer;
 
 function startGame() {
@@ -36,7 +36,7 @@ function checkInput() {
 
 function updateTimer() {
     timeLeft--;
-    timerElement.textContent = `남은 시간: ${timeLeft}초`;
+    timerElement.textContent = `남은 시간: ${timeLeft}`;
 
     if (timeLeft <= 0) {
         clearInterval(timer);
